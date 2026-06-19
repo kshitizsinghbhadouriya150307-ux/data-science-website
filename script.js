@@ -97,10 +97,10 @@ checkbox.addEventListener("change", () => {
 
     if(checkbox.checked){
         monthly.style.color = "#a8b0c0";
-        yearly.style.color = "#12978f";
+        yearly.style.color = "#000000ec";
     }
     else{
-        monthly.style.color = "#12978f";
+        monthly.style.color = "#000000ec";
         yearly.style.color = "#a8b0c0";
     }
 
