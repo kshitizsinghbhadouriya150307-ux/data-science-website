@@ -66,14 +66,27 @@ const observer = new IntersectionObserver((entries) => {
     });
 
 });
+[
+    "#firstheading",
+    ".h",
+    ".main-work-process",
+    ".services-main-heading",
+    ".main-case-study",
+    ".price-heading",
+    ".team-headline"
+].forEach(selector => {
 
-observer.observe(document.getElementById("firstheading"));
-observer.observe(document.querySelector(".h"));
-observer.observe(document.querySelector(".main-work-process"));
-observer.observe(document.querySelector(".services-main-heading"));
-observer.observe(document.querySelector(".main-case-study"));
-observer.observe(document.querySelector(".price-heading"));
+    const element = document.querySelector(selector);
 
+    if(element){
+        observer.observe(element);
+    }
+
+});
+document.querySelectorAll(".team-headline")
+.forEach(element => {
+    observer.observe(element);
+});
 
 
 
@@ -105,3 +118,4 @@ checkbox.addEventListener("change", () => {
     }
 
 });
+
